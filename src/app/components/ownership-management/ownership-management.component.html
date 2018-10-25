@@ -1,0 +1,126 @@
+<h5>Ownership and Management</h5>
+<h6>Who will manage your business?</h6>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex aperiam temporibus debitis voluptatem nemo culpa omnis nobis
+  quam doloremque.</p>
+
+<div class="container">
+  <div class="row">
+    <mat-card class="example-card col-md-5  col-sm-5 col-xs-12">
+      <mat-card-content>
+        <div class="text-center">
+          <img src="assets/graphics/owner-icon.png" alt="single" style="margin-bottom: 15px;">
+        </div>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+          very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="example-card col-md-5  col-sm-5 col-xs-12 offset-md-1 offset-sm-2">
+      <mat-card-content>
+        <div class="text-center">
+          <img src="assets/graphics/owner-and-managers-icon.png" alt="group" style="margin-bottom: 15px;">
+        </div>
+
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+          very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<form class="example-form">
+  <h6>Who is the business owner?</h6>
+  <div *ngFor="let i of [0,1]">
+    <h6>
+      <strong>Owner {{i+1}}</strong>
+      <button mat-icon-button style="float: right;">
+        <mat-icon aria-label="Example icon-button with a heart icon" color="primary">delete_outline</mat-icon>
+      </button>
+      <div class="clearfix"></div>
+
+    </h6>
+    <div class="row">
+      <mat-form-field appearance="outline" *ngIf="i==0" class="example-full-width col-md-6">
+        <input matInput placeholder="Email" [formControl]="emailFormControl">
+        <mat-label>E-mail</mat-label>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field  appearance="outline" *ngIf="i==1" class="example-full-width col-md-6">
+        <input matInput placeholder="First Name*">
+      </mat-form-field>
+      <mat-form-field  appearance="outline" class="example-full-width col-md-6">
+        <input matInput placeholder="Last Name*">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field  appearance="outline" class="example-full-width col-md-6">
+        <input matInput placeholder="Ownership percentage">
+      </mat-form-field>
+      <mat-form-field  appearance="outline" class="example-full-width col-md-6">
+        <input matInput placeholder="Capital contribution">
+      </mat-form-field>
+    </div>
+
+    <mat-radio-group class="example-radio-group" (change)="debug()" name="{{'myRadioGroup'+i}}" [(ngModel)]="favoriteSeason[i]">
+      <mat-radio-button value="addr1">101, North Address Line 1</mat-radio-button>
+      <mat-radio-button value="other">Other Address</mat-radio-button>
+    </mat-radio-group>
+
+    <div *ngIf="favoriteSeason[i]=='other'">
+      <div class="row">
+        <mat-form-field  appearance="outline" class="example-full-width col-md-12">
+          <input matInput placeholder="Address Line 1*">
+        </mat-form-field>
+        <mat-form-field  appearance="outline" class="example-full-width col-md-12">
+          <input matInput placeholder="Address Line 2*">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field  appearance="outline" class="example-full-width col-md-6">
+          <input matInput placeholder="City*">
+        </mat-form-field>
+        <mat-form-field  appearance="outline" class="example-full-width col-md-6">
+          <mat-select placeholder="Select Country">
+            <mat-option *ngFor="let option of ['option1','option2','option3']" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field  appearance="outline" class="example-full-width col-md-6">
+          <input matInput placeholder="State">
+        </mat-form-field>
+        <mat-form-field  appearance="outline" class="example-full-width col-md-6">
+          <input matInput placeholder="ZipCode*">
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-divider style="margin: 15px 0;"></mat-divider>
+  </div>
+
+  <div>
+    <button mat-icon-button>
+      <mat-icon aria-label="Example icon-button with a heart icon" color="primary">add_circle_outline</mat-icon>
+      <a href="#" style="text-decoration:none">Add Another Owner</a>
+    </button>
+  </div>
+  <div class="row">
+    <small class="col-sm-6" style="float: left;margin-top: 15px;">Fields with * are required</small>
+    <div class="col-md-6 col-sm-6">
+      <button mat-raised-button color="basic" style="margin-right: 8px;">Back</button>
+      <button mat-raised-button color="primary" style="margin-right: 8px;">Continue</button>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+</form>

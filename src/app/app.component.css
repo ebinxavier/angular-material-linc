@@ -1,0 +1,51 @@
+button:focus{
+    outline: 0;
+  }
+.linc-button{
+    background: #0166ff;
+    color: white;
+    border-radius: 24px;
+}
+.linc-button mat-icon {
+    right: -11px;
+    position: relative;
+}
+
+
+.active-card{
+    box-shadow: 0px 0px 5px 0px #339eff !important;
+    border: 1px solid #0975d6;
+}
+.example-card {
+    max-width: 250px;
+    margin-right: 15px;
+  }
+  
+.example-header-image {
+background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+background-size: cover;
+}
+
+.editableDiv:hover{
+    outline: 0;
+}
+.editableDiv{
+    width: 500px;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #bbd6fe;
+}
+.drop-custom{
+    width: 250px;
+    background: white;
+    height: 40px;
+    border: 1px solid #bbd6fe;
+    padding-left: 15px;
+}
+
+
+
+
+
+
+

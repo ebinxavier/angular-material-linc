@@ -1,20 +1,184 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container" style="margin-top: 50px">
 
+
+  <h4>Buttons</h4>
+
+
+  <button mat-raised-button color="basic" class="linc-button">
+    Add
+    <mat-icon aria-label="Example icon-button with a heart icon">add_circle_outline</mat-icon>
+  </button>
+  <br/>
+  <br/>
+
+  <button mat-raised-button color="basic" class="linc-button">
+    Next
+    <mat-icon aria-label="Example icon-button with a heart icon">keyboard_arrow_right</mat-icon>
+  </button>
+  <br/>
+  <br/>
+  <hr/>
+
+  <h4>Text Input</h4>
+  <h6>Built-in</h6>
+  <p>
+    <mat-form-field appearance="outline" style="font-size: 13px">
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <br/>
+  <br/>
+  <h6>Custom</h6>
+  <app-text-input></app-text-input>
+
+  <br/>
+  <br/>
+  <hr/>
+  <h4>Text Area</h4>
+  <h6>Built-in</h6>
+  <mat-form-field appearance="outline" class="example-full-width">
+    <mat-label>Outline form field</mat-label>
+    <textarea matInput placeholder="Leave a comment"></textarea>
+    <!-- <input matInput placeholder="Placeholder"> -->
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <h6>Custom</h6>
+  <app-textarea-input></app-textarea-input>
+
+  <textarea class="editableDiv" placeholder="Instruction(Optional)"></textarea>
+  <!-- <div contenteditable="true" class="editableDiv" style="width:  500px;height: 250px;">
+    Content Editableasdf
+    <div>asdf</div>
+  </div> -->
+
+  <br/>
+  <br/>
+  <hr/>
+  <h4>Card Checkbox</h4>
+  <div class="row">
+
+    <mat-card [ngClass]="{'active-card ':selectedCard=='a'}" class="example-card col-md-6" (click)="selectedCard='a'">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card [ngClass]="{'active-card ':selectedCard=='b'}" class="example-card col-md-6" (click)="selectedCard='b'">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <br/>
+  <br/>
+  <hr/>
+  <h4>Dropdown</h4>
+  <h6>Built-in</h6>
+
+  <mat-form-field appearance="outline" class="col-md-6">
+    <mat-select placeholder="Select Country">
+      <mat-option *ngFor="let option of ['option1','option2','option3']" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br/>
+  <br/>
+  <h6>Custom</h6>
+  <select class="drop-custom">
+    <option>Select Country</option>
+    <option>Option1</option>
+    <option>Option2</option>
+    <option>Option3</option>
+    <option>Option4</option>
+  </select>
+  <br/>
+  <br/>
+
+  <app-dropdown></app-dropdown>
+
+  <br/>
+  <br/>
+  <hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <app-ownership-management class="col-md-7"></app-ownership-management>
+    <app-your-order class="col-md-5"></app-your-order> -->
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 15px 0 50px 0;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+ .icon-style-center{
+  text-align: center;
+  width: 100%;
+ }
+ .icon-style-right{
+  text-align: right;
+  width: 100%;
+  cursor: pointer;
+ }
+ .example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+
+button:focus{
+  outline: 0;
+}
+
+.example-card{
+  min-height: 250px;
+  margin-top: 15px;
+}
