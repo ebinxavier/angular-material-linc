@@ -21,6 +21,7 @@ import { YourOrderComponent } from './components/your-order/your-order.component
 import { TextInputComponent } from './components/material/text-input/text-input.component';
 import { TextareaInputComponent } from './components/material/textarea-input/textarea-input.component';
 import { DropdownComponent } from './components/material/dropdown/dropdown.component';
+import { InputsComponent } from './components/material/inputs/inputs.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DropdownComponent } from './components/material/dropdown/dropdown.compo
     YourOrderComponent,
     TextInputComponent,
     TextareaInputComponent,
-    DropdownComponent
+    DropdownComponent,
+    InputsComponent
   ],
   imports: [
     BrowserModule,

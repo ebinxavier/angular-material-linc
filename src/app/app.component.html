@@ -1,104 +1,116 @@
 <div class="container" style="margin-top: 50px">
 
-
-  <h4>Buttons</h4>
-
-
-  <button mat-raised-button color="basic" class="linc-button">
-    Add
-    <mat-icon aria-label="Example icon-button with a heart icon">add_circle_outline</mat-icon>
-  </button>
-  <br/>
-  <br/>
-
-  <button mat-raised-button color="basic" class="linc-button">
-    Next
-    <mat-icon aria-label="Example icon-button with a heart icon">keyboard_arrow_right</mat-icon>
-  </button>
-  <br/>
-  <br/>
+  <h3>Sample Layout</h3>
+  <div class="row">
+    <app-ownership-management class="col-md-7"></app-ownership-management>
+    <app-your-order class="col-md-5"></app-your-order>
+  </div>
   <hr/>
+
+
+  <!-- <mat-form-field class="text-input" appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Email" [formControl]="emailFormControl"
+             [errorStateMatcher]="matcher">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field> -->
+
+
+
+
+
+
+
+
+
+  <h3>Custom Components</h3>
+
+
+  <!-- <hr/> -->
 
   <h4>Text Input</h4>
   <h6>Built-in</h6>
-  <p>
-    <mat-form-field appearance="outline" style="font-size: 13px">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
+  <mat-form-field appearance="outline" class="example-full-width">
+    <mat-label>Outline form field</mat-label>
+    <input type="text" matInput placeholder="Leave a comment">
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+
+
+
   <br/>
   <br/>
+  <!-- <hr/> -->
   <h6>Custom</h6>
+
   <app-text-input></app-text-input>
 
   <br/>
   <br/>
-  <hr/>
+  <!-- <hr/> -->
   <h4>Text Area</h4>
   <h6>Built-in</h6>
   <mat-form-field appearance="outline" class="example-full-width">
     <mat-label>Outline form field</mat-label>
     <textarea matInput placeholder="Leave a comment"></textarea>
-    <!-- <input matInput placeholder="Placeholder"> -->
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
   <h6>Custom</h6>
-  <app-textarea-input></app-textarea-input>
+  <!-- <app-inputs></app-inputs> -->
 
   <textarea class="editableDiv" placeholder="Instruction(Optional)"></textarea>
-  <!-- <div contenteditable="true" class="editableDiv" style="width:  500px;height: 250px;">
-    Content Editableasdf
-    <div>asdf</div>
-  </div> -->
+
 
   <br/>
   <br/>
-  <hr/>
+  <!-- <hr/> -->
   <h4>Card Checkbox</h4>
   <div class="row">
 
     <mat-card [ngClass]="{'active-card ':selectedCard=='a'}" class="example-card col-md-6" (click)="selectedCard='a'">
-      <mat-card-header>
+      <!-- <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>Shiba Inu</mat-card-title>
         <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+      </mat-card-header> -->
+
       <mat-card-content>
         <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          Standard Processing
         </p>
       </mat-card-content>
-      <mat-card-actions>
+      <!-- <mat-card-actions>
         <button mat-button>LIKE</button>
         <button mat-button>SHARE</button>
-      </mat-card-actions>
+      </mat-card-actions> -->
     </mat-card>
     <mat-card [ngClass]="{'active-card ':selectedCard=='b'}" class="example-card col-md-6" (click)="selectedCard='b'">
-      <mat-card-header>
+      <!-- <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>Shiba Inu</mat-card-title>
         <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+      </mat-card-header> -->
       <mat-card-content>
         <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          Priority Processing 
         </p>
       </mat-card-content>
-      <mat-card-actions>
+      <!-- <mat-card-actions>
         <button mat-button>LIKE</button>
         <button mat-button>SHARE</button>
-      </mat-card-actions>
+      </mat-card-actions> -->
     </mat-card>
   </div>
 
   <br/>
   <br/>
-  <hr/>
+  <!-- <hr/> -->
   <h4>Dropdown</h4>
   <h6>Built-in</h6>
 
@@ -123,62 +135,98 @@
   <br/>
   <br/>
 
-  <app-dropdown></app-dropdown>
+  <!-- <app-dropdown></app-dropdown> -->
 
   <br/>
   <br/>
+  <!-- <hr/> -->
+
+
+
+  <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+    <input type="text" value="" class="mdl-textfield__input" id="sample4" readonly>
+    <input type="hidden" value="" name="sample4">
+    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+    <label for="sample4" class="mdl-textfield__label">Country</label>
+    <ul for="sample4" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+      <li class="mdl-menu__item" data-val="DEU">Germany</li>
+      <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+      <li class="mdl-menu__item" data-val="RUS">Russia</li>
+    </ul>
+  </div> -->
+
+  <!-- <app-inputs></app-inputs>
+
+  <app-dropdown></app-dropdown> -->
+
+
+
+  <hr/>
+
+  <h3>Custom Components built on Material </h3>
+  <h4>Buttons</h4>
+
+
+  <button mat-raised-button color="basic" class="linc-button">
+    Add
+    <mat-icon aria-label="Example icon-button with a heart icon">add_circle_outline</mat-icon>
+  </button>
+  <br/>
+  <br/>
+
+  <button mat-raised-button color="basic" class="linc-button">
+    Next
+    <mat-icon aria-label="Example icon-button with a heart icon">keyboard_arrow_right</mat-icon>
+  </button>
+  <br/>
+  <br/>
+  <h4>Single line Text Input</h4>
+  <mat-form-field class="text-input" appearance="outline">
+    <mat-label>E-mail*</mat-label>
+    <input matInput placeholder="E-mail" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+    <mat-hint style=" margin-top: 0px">Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is
+      <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+
+
+  <p>
+    <mat-form-field class="text-input" appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix color="primary">sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <br/>
+  <br/>
+  <!-- <hr/> -->
+  <h4>Text Area</h4>
+  <mat-form-field appearance="outline" class="text-area example-full-width">
+    <mat-label>Instructions( Optional )</mat-label>
+    <textarea matInput placeholder="Leave a comment" rows="6"></textarea>
+
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <br/>
+  <br/>
+  <!-- <hr/> -->
+  <h4>Drop Down</h4>
+  <mat-form-field appearance="outline" class="drop-down">
+    <mat-select placeholder="Favorite food">
+      <mat-option *ngFor="let food of ['Apple','Orange','Grape']" [value]="food">
+        {{food}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
   <hr/>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="row">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <app-ownership-management class="col-md-7"></app-ownership-management>
-    <app-your-order class="col-md-5"></app-your-order> -->
-  </div>
 </div>
