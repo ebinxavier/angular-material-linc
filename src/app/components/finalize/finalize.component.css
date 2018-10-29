@@ -32,7 +32,7 @@
     }
     .text-input >>> input{
         padding-left: 5px;
-        font-weight: bold;
+        /* font-weight: bold; */
         height: 19px;
     }
   
@@ -67,7 +67,7 @@ margin-left: -10px;
 }
 .text-area>>> textarea{
     padding-left: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
   
 
@@ -85,7 +85,7 @@ margin-left: -10px;
   }
   .drop-down>>>  mat-select{
     padding-left: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
     height: 19px;
 }
 .drop-down.error >>> .mat-form-field-outline  {
