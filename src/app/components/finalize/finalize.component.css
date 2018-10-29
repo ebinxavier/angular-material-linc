@@ -1,0 +1,239 @@
+.error-color{
+    color: #e91e63;
+}
+
+.mat-form-field-outline-start, .mat-form-field-outline-gap .mat-form-field-outline-end{
+    border: none;
+  }
+  
+  .text-input >>> .mat-form-field-subscript-wrapper{
+    margin-top: 0px !important;
+  }
+  
+  .text-input >>> .mat-form-field-appearance-outline .mat-form-field-outline-start{
+    border-radius: 0px;
+  }
+  
+  .text-input >>> .mat-form-field-outline div{
+    border: none;
+  }
+  .text-input >>> .mat-form-field-outline  {
+    border: 1px solid #bbd6fe;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px -2px;
+    height: 43px;
+  }
+  .text-input.error >>> .mat-form-field-outline  {
+  border: 1px solid #e91e63;
+  color: #e91e63;
+  }
+    .text-input.focus >>> .mat-form-field-outline  {
+    border: 1px solid #6d9cff;
+    }
+    .text-input >>> input{
+        padding-left: 5px;
+        font-weight: bold;
+        height: 19px;
+    }
+  
+    .text-input >>> .mat-error{
+        margin-left: -10px;
+    }
+   .text-input >>> .mat-hint{
+    margin-left: -10px;
+   }
+
+
+  .text-area >>> .mat-form-field-outline div{
+    border: none;
+  }
+  .text-area >>> .mat-form-field-outline  {
+    border: 1px solid #bbd6fe;
+    box-shadow: 0px 0px 3px -2px;
+    /* margin-top: -6px; */
+  }
+  .text-area >>> .mat-error{
+    margin-left: -10px;
+    }
+.text-area >>> .mat-hint{
+margin-left: -10px;
+}
+.text-area.focus >>> .mat-form-field-outline  {
+    border: 1px solid #6d9cff;
+    }
+.text-area.error >>> .mat-form-field-outline  {
+    border: 1px solid #e91e63;
+    color: #e91e63;
+}
+.text-area>>> textarea{
+    padding-left: 5px;
+    font-weight: bold;
+}
+  
+
+
+
+
+
+  
+  .drop-down >>> .mat-form-field-outline div{
+    border: none;
+  }
+  .drop-down >>> .mat-form-field-outline  {
+    border: 1px solid #bbd6fe;
+    height: 43px;
+  }
+  .drop-down>>>  mat-select{
+    padding-left: 5px;
+    font-weight: bold;
+    height: 19px;
+}
+.drop-down.error >>> .mat-form-field-outline  {
+    border: 1px solid #e91e63;
+  }
+ 
+
+
+
+
+
+  .drop-down >>> .mat-select-arrow{
+    border-left: 0px;
+    border-right: 0px;
+  }
+  .drop-down >>> .mat-select-arrow::before{
+    border-style: solid;
+    border-width: 0.2em 0.2em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.65em;
+    left: -0.7em;
+    position: relative;
+    top: -0.95em;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    vertical-align: top;
+    width: 0.65em;
+    color: #0166ff;
+  }
+  .drop-down.error >>> .mat-select-arrow::before{
+  color:#e91e63;
+  }
+  
+
+
+
+
+  ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+    transform: translateY(-0.5em) scale(0.75); 
+    color: gray;
+  }
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-label{
+    top: 1.54375em;
+    left: 5px;
+  }
+  
+
+  /* Buttons */
+  button:focus{
+    outline: 0;
+  }
+  .linc-button.primary{
+    background: #0166ff;
+    color: white;
+    border-radius: 24px;
+  }
+  .linc-button.secondary{
+    color: #0166ff;
+    background: white;
+    border-radius: 24px;
+    border: 2px solid#0166ff;
+  }
+  .linc-button mat-icon {
+    right: -11px;
+    top:-1px;
+    position: relative;
+  }
+  .linc-button span
+  {
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: initial;
+  }
+
+  .linc-button.left-icon mat-icon{
+    right: 11px;
+    top:-1px;
+  }
+  .linc-button.left-icon span{
+    margin-left: -10px;
+  }
+
+
+  /* Cards */
+
+  .linc-card{
+    border: 1px solid #a3d3ff;
+    width: 150px;
+    height: 40px;
+    padding: 8px 50px 0px 53px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position-y: 10px;
+    background-position-x: 10px;
+    cursor: pointer;
+  }
+
+  .linc-card.yes{
+    background-image: url("../../../assets/graphics/yes-icon.png");
+  }
+  .linc-card.no{
+    background-image: url("../../../assets/graphics/no-icon.png");
+  }
+
+  .linc-card.active{
+    box-shadow: 0px 0px 1px 0px #0975d6 !important;
+    border: 1px solid #0975d6;
+    
+}
+.linc-card-big{
+    width: 250px;
+    cursor: pointer;
+    border: 1px solid #a3d3ff;
+    box-shadow: none;
+}
+
+.linc-card-big.active{
+    box-shadow: 0px 0px 1px 0px #0975d6 !important;
+    border: 1px solid #0975d6;
+        -webkit-animation-name: cssAnimation;
+        -webkit-animation-duration:.3s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-fill-mode: forwards;
+      
+    /* width: 201px; */
+}
+/* @-webkit-keyframes cssAnimation {
+
+    0%   { -webkit-transform: rotate( 0deg) scale(1) skew(0deg);}
+    50%  { -webkit-transform: rotate(-2deg) scale(1) skew(0deg);}
+    100%  { -webkit-transform: rotate(-2deg) scale(1) skew(0deg);}
+  } */
+
+
+::ng-deep .mat-checkbox-frame {
+    border-color: #4e93f9;
+    border-width: 1px !important;
+}
+
+.openSans{
+    font-family: 'Open Sans', sans-serif;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card-radio{
+    
+}

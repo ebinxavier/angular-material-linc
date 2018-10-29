@@ -11,7 +11,8 @@ import {
   MatRadioModule,
   MatDividerModule,
   MatSelectModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatCheckboxModule
 } from "@angular/material";
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { TextInputComponent } from './components/material/text-input/text-input.
 import { TextareaInputComponent } from './components/material/textarea-input/textarea-input.component';
 import { DropdownComponent } from './components/material/dropdown/dropdown.component';
 import { InputsComponent } from './components/material/inputs/inputs.component';
+import { FinalizeComponent } from './components/finalize/finalize.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { InputsComponent } from './components/material/inputs/inputs.component';
     TextInputComponent,
     TextareaInputComponent,
     DropdownComponent,
-    InputsComponent
+    InputsComponent,
+    FinalizeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { InputsComponent } from './components/material/inputs/inputs.component';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule,MatIconModule,
-    MatRadioModule,MatDividerModule,MatSelectModule,MatProgressBarModule
+    MatRadioModule,MatDividerModule,MatSelectModule,MatProgressBarModule,MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -42,6 +42,8 @@ background-size: cover;
     border: 1px solid #bbd6fe;
     padding-left: 15px;
 }
+
+
 .mat-form-field-outline-start, .mat-form-field-outline-gap .mat-form-field-outline-end{
     border: none;
 }
@@ -59,16 +61,19 @@ background-size: cover;
   }
 .text-input >>> .mat-form-field-outline  {
     border: 1px solid #bbd6fe;
-    margin-top: -6px;
-    height: 50px;
+    /* margin-top: -6px; */
+    height: 43px;
   }
+.text-input.error >>> .mat-form-field-outline  {
+border: 1px solid #e91e63;
+}
 
 .text-area >>> .mat-form-field-outline div{
     border: none;
 }
 .text-area >>> .mat-form-field-outline  {
     border: 1px solid #bbd6fe;
-    margin-top: -6px;
+    /* margin-top: -6px; */
   }
 
 .drop-down >>> .mat-form-field-outline div{
@@ -76,7 +81,9 @@ background-size: cover;
 }
 .drop-down >>> .mat-form-field-outline  {
     border: 1px solid #bbd6fe;
-    margin-top: 10px;
+    height: 43px;
+    /* margin-top: -6px; */
+    /* margin-bottom: 7px; */
   }
 .drop-down >>> .mat-select-arrow{
     border-left: 0px;
@@ -90,7 +97,7 @@ background-size: cover;
     height: 0.65em;
     left: -0.7em;
     position: relative;
-    top: -0.25em;
+    top: -0.95em;
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
     vertical-align: top;
@@ -98,3 +105,9 @@ background-size: cover;
     color: #0166ff;
 }
 
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+    transform: translateY(-1em) scale(0.75); 
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper{
+    margin: 0px !important;
+}
