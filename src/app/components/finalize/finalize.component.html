@@ -8,7 +8,7 @@
 
     <!-- Normal -->
     <mat-form-field appearance="outline" [ngClass]="{'focus':firstNameFormControl.focused}" class="text-input example-full-width col-md-6">
-      <input matInput placeholder="First Name" class="openSans" (focus)="firstNameFormControl.focused=true;" (focusout)="firstNameFormControl.focused=false;"
+      <input matInput  class="openSans" (focus)="firstNameFormControl.focused=true;" (focusout)="firstNameFormControl.focused=false;"
         [formControl]="firstNameFormControl">
       <mat-label class="openSans">First Name</mat-label>
     </mat-form-field>
@@ -19,7 +19,7 @@
       'error':emailFormControl.touched && ( emailFormControl.hasError('email') || emailFormControl.hasError('required')),
       'focus':emailFormControl.focused && !(emailFormControl.touched && ( emailFormControl.hasError('email') || emailFormControl.hasError('required')))
     }" class="text-input example-full-width col-md-6">
-      <input matInput placeholder="Email" class="openSans" [ngClass]="{'error-color':emailFormControl.touched && ( emailFormControl.hasError('email') || emailFormControl.hasError('required'))}"
+      <input matInput  class="openSans" [ngClass]="{'error-color':emailFormControl.touched && ( emailFormControl.hasError('email') || emailFormControl.hasError('required'))}"
         (focus)="emailFormControl.focused=true;" (focusout)="emailFormControl.focused=falses;" [formControl]="emailFormControl">
       <mat-label class="openSans">Email Address*</mat-label>
       <mat-error class="openSans" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -40,7 +40,7 @@
     <!-- Normal -->
     <mat-form-field appearance="outline" [ngClass]="{'focus':textArea1FormControl.focused}" class="col-md-6 text-area example-full-width">
       <mat-label class="openSans">Instructions(Optional)</mat-label>
-      <textarea matInput class="openSans" placeholder="Leave a comment" rows="6" (focus)="textArea1FormControl.focused=true;" (focusout)="textArea1FormControl.focused=false;"
+      <textarea matInput class="openSans" rows="6" (focus)="textArea1FormControl.focused=true;" (focusout)="textArea1FormControl.focused=false;"
         [formControl]="textArea1FormControl"></textarea>
       <mat-hint class="openSans">Hint</mat-hint>
     </mat-form-field>
@@ -48,7 +48,7 @@
     <mat-form-field appearance="outline" [ngClass]="{'focus':textArea2FormControl.focused,'error':textArea2FormControl.touched && textArea2FormControl.hasError('required')}"
       class="col-md-6 text-area example-full-width">
       <mat-label class="openSans">Instructions*</mat-label>
-      <textarea matInput placeholder="Leave a comment" rows="6" (focus)="textArea2FormControl.focused=true;" (focusout)="textArea2FormControl.focused=false;"
+      <textarea matInput rows="6" (focus)="textArea2FormControl.focused=true;" (focusout)="textArea2FormControl.focused=false;"
         [formControl]="textArea2FormControl"></textarea>
       <mat-hint class="openSans">Hint</mat-hint>
       <mat-error class="openSans" *ngIf="textArea2FormControl.hasError('required')">
@@ -73,7 +73,7 @@
     <div class="col-md-6">
       <mat-form-field appearance="outline" class="drop-down">
         <mat-label class="openSans">Favourite Food</mat-label>
-        <mat-select placeholder="Favorite food">
+        <mat-select>
           <mat-option class="openSans" *ngFor="let food of ['Apple','Orange','Grape']" [value]="food">
             {{food}}
           </mat-option>
@@ -85,7 +85,7 @@
     <div class="col-md-6">
       <mat-form-field appearance="outline" class="drop-down" [ngClass]="{'focus':dropdown2FormControl.focused,'error':dropdown2FormControl.touched && dropdown2FormControl.hasError('required')}">
         <mat-label class="openSans">Favourite Food*</mat-label>
-        <mat-select placeholder="Favorite food" [formControl]="dropdown2FormControl" (focus)="dropdown2FormControl.focused=true;"
+        <mat-select [formControl]="dropdown2FormControl" (focus)="dropdown2FormControl.focused=true;"
           (focusout)="dropdown2FormControl.focused=false;">
           <mat-option class="openSans" *ngFor="let food of ['Apple','Orange','Grape']" [value]="food">
             {{food}}
@@ -133,7 +133,7 @@
   <!-- Processing -Bigger -->
 
   <div class="row">
-    <mat-card class="linc-card-big " [ngClass]="{'active ':selectedCardBig=='a'}" (click)="selectedCardBig='a'">
+    <mat-card class="linc-card-big ripple" [ngClass]="{'active ':selectedCardBig=='a'}" (click)="selectedCardBig='a'">
       <mat-card-content>
         <div class="text-center">
           <img src="assets/graphics/owner-icon.png" alt="single" style="margin-bottom: 15px;">
@@ -146,7 +146,7 @@
       </mat-card-content>
     </mat-card>
     <span style="width: 20px;display:inline-block"></span>
-    <mat-card class="linc-card-big " [ngClass]="{'active ':selectedCardBig=='b'}" (click)="selectedCardBig='b'">
+    <mat-card class="linc-card-big ripple" [ngClass]="{'active ':selectedCardBig=='b'}" (click)="selectedCardBig='b'">
       <mat-card-content>
         <div class="text-center">
           <img src="assets/graphics/owner-and-managers-icon.png" alt="group" style="margin-bottom: 15px;">
